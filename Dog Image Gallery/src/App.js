@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BreedSelector from "./components/BreedSelector";
 import ImageGallery from "./components/ImageGallery";
 import Footer from "./components/Footer";
@@ -24,12 +25,21 @@ const App = () => {
   }, [breed, numImages]);
 
   return (
-    <div>
+    <Router>
       <Header />
-      <BreedSelector setBreed={setBreed} setNumImages={setNumImages} />
-      <ImageGallery images={images} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div>
+              <BreedSelector setBreed={setBreed} setNumImages={setNumImages} />
+              <ImageGallery images={images} />
+            </div>
+          }
+        />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 };
 
