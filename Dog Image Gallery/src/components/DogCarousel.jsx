@@ -1,0 +1,49 @@
+// src/components/DogCarousel.jsx
+import React, { useState, useEffect } from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useNavigate } from "react-router-dom";
+
+const DogCarousel = ({ breed, numImages }) => {
+  const [images, setImages] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchDogImages = async () => {
+      if (breed && numImages > 0) {
+        try {
+          const response = await fetch(
+            `https://dog.ceo/api/breed/${breed}/images/random/${numImages}`
+          );
+          const data = await response.json();
+          setImages(data.message);
+        } catch (error) {
+          console.error("Failed to fetch images:", error);
+        }
+      } else {
+        setImages([]);
+      }
+    };
+
+    fetchDogImages();
+  }, [breed, numImages]);
+
+  return (
+    <div>
+      <button onClick={() => navigate("/")}>Return to Main Page</button>
+      {images.length > 0 ? (
+        <Carousel showThumbs={false} infiniteLoop autoPlay>
+          {images.map((image, index) => (
+            <div key={index}>
+              <img src={image} alt={`Dog ${index}`} />
+            </div>
+          ))}
+        </Carousel>
+      ) : (
+        <p>No images selected. Please select a breed and number of images.</p>
+      )}
+    </div>
+  );
+};
+
+export default DogCarousel;
