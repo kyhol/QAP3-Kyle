@@ -5,11 +5,19 @@ const Header = () => {
   return (
     <>
       <div className="header">
+        <span className="headerDog">
+          <FaDog />
+        </span>
         <h1>
-          <FaDog />
-          &nbsp; Dog API Image Gallery &nbsp;
-          <FaDog />
+          &nbsp;<span className="headerText">Dog API Image Gallery</span>&nbsp;
         </h1>
+        <div className="headerButtonWrapper">
+          <button className="headerButton">Home</button>
+          <button className="headerButton">About</button>
+          <a href="https://dog.ceo/dog-api/">
+            <button className="headerButton">Dog API</button>
+          </a>
+        </div>
       </div>
     </>
   );

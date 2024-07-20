@@ -12,15 +12,42 @@ body,
 }
 
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 108px;
   background-color: #5cc8ff;
-  color: white;
-  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
 }
 
+.headerDog {
+  font-size: 24px;
+  color: #333;
+}
+
+.headerText {
+  font-size: 40px;
+  color: #333;
+}
+
+.headerButtonWrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.headerButton {
+  padding: 8px 16px;
+  background-color: #408cb2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 24px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.headerButton:hover {
+  background-color: #dec1ff;
+  scale: 1.1;
+}
 .main-container {
   display: flex;
   justify-content: center;
@@ -69,16 +96,19 @@ body,
   padding: 10px 20px;
   height: 50px;
 }
-
+.form-container Button:hover {
+  background-color: #dec1ff;
+  scale: 1.1;
+}
 .footer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   height: 108px;
   background-color: #5cc8ff;
   color: white;
-  font-size: 24px;
-  padding: 10px 0;
+  font-size: 16px;
+  padding: 0px 20px;
   z-index: 10;
 }
 .viewCarsouselButtonWrapper {
@@ -98,6 +128,10 @@ body,
   padding: 10px 20px;
   height: 50px;
   margin-bottom: 20px;
+}
+.viewCarsouselButton:hover {
+  background-color: #dec1ff;
+  scale: 1.1;
 }
 button {
   text-decoration: none;
@@ -119,6 +153,10 @@ button {
   cursor: pointer;
   padding: 10px 20px;
   height: 50px;
+}
+.returnWrapperButton:hover {
+  background-color: #dec1ff;
+  scale: 1.1;
 }
 
 form {
@@ -228,4 +266,13 @@ label h2 {
 .main-content {
   flex: 1;
   padding: 20px;
+}
+
+.headerDog {
+  color: #343633;
+  font-size: 44px;
+}
+
+.headerText {
+  color: whitesmoke;
 }
