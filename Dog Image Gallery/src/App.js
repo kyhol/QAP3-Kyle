@@ -6,6 +6,7 @@ import ImageGallery from "./components/ImageGallery";
 import DogCarousel from "./components/DogCarousel";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import { GiCarousel } from "react-icons/gi";
 
 const App = () => {
   const [breed, setBreed] = useState("");
@@ -32,30 +33,37 @@ const App = () => {
 
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              <BreedSelector setBreed={setBreed} setNumImages={setNumImages} />
-              <ImageGallery images={images} />
-              <Link to="/carousel">
-                <div className="viewCarsouselButtonWrapper">
-                  <button className="viewCarsouselButton">
-                    View as Carousel
-                  </button>
+      <div className="wrapper">
+        <Header />
+        <div className="main-content">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div>
+                  <BreedSelector
+                    setBreed={setBreed}
+                    setNumImages={setNumImages}
+                  />
+                  <ImageGallery images={images} />
+                  <div className="viewCarsouselButtonWrapper">
+                    <Link to="/carousel">
+                      <button className="viewCarsouselButton">
+                        View as Carousel &nbsp; <GiCarousel />
+                      </button>
+                    </Link>
+                  </div>
                 </div>
-              </Link>
-            </div>
-          }
-        />
-        <Route
-          path="/carousel"
-          element={<DogCarousel breed={breed} numImages={numImages} />}
-        />
-      </Routes>
-      <Footer />
+              }
+            />
+            <Route
+              path="/carousel"
+              element={<DogCarousel breed={breed} numImages={numImages} />}
+            />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
     </Router>
   );
 };

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useNavigate } from "react-router-dom";
+import { GiDogHouse } from "react-icons/gi";
 
 const DogCarousel = ({ breed, numImages }) => {
   const [images, setImages] = useState([]);
@@ -31,7 +32,8 @@ const DogCarousel = ({ breed, numImages }) => {
   return (
     <div className="returnWrapper">
       <button className="returnWrapperButton" onClick={() => navigate("/")}>
-        Return to Main Page
+        <GiDogHouse />
+        &nbsp; Return to Main Page
       </button>
       {images.length > 0 ? (
         <div className="carousel-wrapper">

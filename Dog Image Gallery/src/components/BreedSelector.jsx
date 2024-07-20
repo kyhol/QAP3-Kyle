@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { GiJumpingDog } from "react-icons/gi";
 
 const BreedSelector = ({ setBreed, setNumImages }) => {
   const [breeds, setBreeds] = useState([]);
@@ -44,7 +45,10 @@ const BreedSelector = ({ setBreed, setNumImages }) => {
               defaultValue="1"
             />
           </label>
-          <button type="submit">Fetch Images</button>
+          <button type="submit">
+            Fetch Images &nbsp;
+            <GiJumpingDog />
+          </button>
         </form>
       </div>
     </>

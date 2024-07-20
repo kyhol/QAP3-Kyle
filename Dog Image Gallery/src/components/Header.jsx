@@ -1,10 +1,15 @@
 import React from "react";
+import { FaDog } from "react-icons/fa";
 
 const Header = () => {
   return (
     <>
       <div className="header">
-        <h1>Dog Image Gallery</h1>
+        <h1>
+          <FaDog />
+          &nbsp; Dog API Image Gallery &nbsp;
+          <FaDog />
+        </h1>
       </div>
     </>
   );
