@@ -130,3 +130,35 @@ input[type="number"]:focus {
   border-color: #007bff;
   outline: none;
 }
+
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.carousel-image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.carousel .control-dots .dot {
+  background-color: purple;
+}
+
+.carousel .control-dots .dot:hover,
+.carousel .control-dots .dot.selected {
+  background-color: rgb(100, 20, 100);
+}
+
+/* CarouselStyles.css */
+.carousel .slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 17px;
+}

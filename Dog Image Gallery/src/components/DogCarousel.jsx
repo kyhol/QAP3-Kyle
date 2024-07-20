@@ -34,13 +34,20 @@ const DogCarousel = ({ breed, numImages }) => {
         Return to Main Page
       </button>
       {images.length > 0 ? (
-        <Carousel showThumbs={false} infiniteLoop autoPlay>
-          {images.map((image, index) => (
-            <div key={index}>
-              <img src={image} alt={`Dog ${index}`} />
-            </div>
-          ))}
-        </Carousel>
+        <div className="carousel-wrapper">
+          <Carousel
+            className="carousel-image"
+            showThumbs={false}
+            infiniteLoop
+            autoPlay
+          >
+            {images.map((image, index) => (
+              <div className="carousel-image" key={index}>
+                <img src={image} alt={`Dog ${index}`} />
+              </div>
+            ))}
+          </Carousel>
+        </div>
       ) : (
         <p>No images selected. Please select a breed and number of images.</p>
       )}
