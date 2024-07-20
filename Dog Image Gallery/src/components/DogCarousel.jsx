@@ -29,8 +29,10 @@ const DogCarousel = ({ breed, numImages }) => {
   }, [breed, numImages]);
 
   return (
-    <div>
-      <button onClick={() => navigate("/")}>Return to Main Page</button>
+    <div className="returnWrapper">
+      <button className="returnWrapperButton" onClick={() => navigate("/")}>
+        Return to Main Page
+      </button>
       {images.length > 0 ? (
         <Carousel showThumbs={false} infiniteLoop autoPlay>
           {images.map((image, index) => (

@@ -22,29 +22,31 @@ const BreedSelector = ({ setBreed, setNumImages }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="form-container">
-        <label>
-          <h2>Select Breed:</h2>
-          <select name="breed">
-            {breeds.map((breed) => (
-              <option key={breed} value={breed}>
-                {breed}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          <h2>Number of Images:</h2>
-          <input
-            type="number"
-            name="numImages"
-            min="1"
-            max="100"
-            defaultValue="1"
-          />
-        </label>
-        <button type="submit">Fetch Images</button>
-      </form>
+      <div className="form-container">
+        <form onSubmit={handleSubmit}>
+          <label>
+            <h2>Select Breed:</h2>
+            <select name="breed">
+              {breeds.map((breed) => (
+                <option key={breed} value={breed}>
+                  {breed}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label>
+            <h2>Number of Images:</h2>
+            <input
+              type="number"
+              name="numImages"
+              min="1"
+              max="100"
+              defaultValue="1"
+            />
+          </label>
+          <button type="submit">Fetch Images</button>
+        </form>
+      </div>
     </>
   );
 };

@@ -41,7 +41,11 @@ const App = () => {
               <BreedSelector setBreed={setBreed} setNumImages={setNumImages} />
               <ImageGallery images={images} />
               <Link to="/carousel">
-                <button>View as Carousel</button>
+                <div className="viewCarsouselButtonWrapper">
+                  <button className="viewCarsouselButton">
+                    View as Carousel
+                  </button>
+                </div>
               </Link>
             </div>
           }
