@@ -12,15 +12,14 @@ body,
 }
 
 .header {
-  background-color: #5cc8ff;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 30px;
   background-image: url("./img/dogs/bannerdogpic.svg");
-  background-size: cover; /* Cover the entire div */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .headerDog {
@@ -304,4 +303,113 @@ a {
   flex-direction: column;
   gap: 20px;
   margin-top: 30px;
+}
+@media (max-width: 1024px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    height: 58px;
+    background-size: contain;
+  }
+
+  .headerText {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .headerButtonWrapper {
+    margin-right: 0;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  .headerButton {
+    padding: 5px 10px;
+    height: 30px;
+    width: 60px;
+    font-size: 8px;
+  }
+  .headerDog {
+    margin-right: 0;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container Button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .image-gallery {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 5px;
+  }
+
+  .gallery-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .carousel-image {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Phone (Portrait) */
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    height: 44px;
+  }
+
+  .headerButton {
+    padding: 5px 10px;
+  }
+  .headerText {
+    font-size: 24px;
+  }
+
+  .headerDog {
+    font-size: 28px;
+  }
+
+  .form-container {
+    padding: 0 10px;
+  }
+
+  .form-container Button {
+    width: 100%;
+  }
+
+  .image-gallery {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 5px;
+  }
+
+  .gallery-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .carousel-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .footer {
+    justify-content: center;
+    font-size: 14px;
+  }
 }

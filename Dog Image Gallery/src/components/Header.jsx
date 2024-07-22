@@ -8,8 +8,10 @@ const Header = () => {
     <div className="header">
       <div className="headerButtonWrapper">
         <button className="headerButton">
-          <Link to="/">Home</Link> &nbsp;
-          <GiDogHouse />
+          <Link to="/">
+            Home &nbsp;
+            <GiDogHouse />
+          </Link>
         </button>
         <button className="headerButton">
           <Link to="/about">About</Link>
