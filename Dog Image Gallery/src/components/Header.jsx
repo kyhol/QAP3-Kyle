@@ -1,20 +1,18 @@
 import React from "react";
 import { FaDog } from "react-icons/fa";
+import { GiDogHouse } from "react-icons/gi";
 
 const Header = () => {
   return (
     <>
       <div className="header">
-        <span className="headerDog">
-          <FaDog />
-        </span>
-        <h1>
-          &nbsp;<span className="headerText">Dog API Image Gallery</span>&nbsp;
-        </h1>
         <div className="headerButtonWrapper">
-          <button className="headerButton">Home</button>
+          <button className="headerButton">
+            Home &nbsp;
+            <GiDogHouse />
+          </button>
           <button className="headerButton">About</button>
-          <a href="https://dog.ceo/dog-api/">
+          <a href="https://dog.ceo/dog-api/" target="blank">
             <button className="headerButton">Dog API</button>
           </a>
         </div>

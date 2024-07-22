@@ -15,12 +15,16 @@ body,
   background-color: #5cc8ff;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: flex-end;
+  padding: 30px;
+  background-image: url("./img/dogs/bannerdogpic.svg");
+  background-size: cover; /* Cover the entire div */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
 }
 
 .headerDog {
-  font-size: 24px;
+  margin-right: 20px;
   color: #333;
 }
 
@@ -32,6 +36,7 @@ body,
 .headerButtonWrapper {
   display: flex;
   gap: 15px;
+  margin-right: 100px;
 }
 
 .headerButton {
@@ -110,6 +115,7 @@ body,
   font-size: 16px;
   padding: 0px 20px;
   z-index: 10;
+  background-image: url("./img/dogs/footer.svg");
 }
 .viewCarsouselButtonWrapper {
   display: flex;
@@ -266,6 +272,7 @@ label h2 {
 .main-content {
   flex: 1;
   padding: 20px;
+  background: linear-gradient(to right, #9aadbf, white, #9aadbf);
 }
 
 .headerDog {
