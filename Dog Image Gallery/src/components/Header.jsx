@@ -1,6 +1,6 @@
 import React from "react";
-import { FaDog } from "react-icons/fa";
 import { GiDogHouse } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -8,10 +8,13 @@ const Header = () => {
       <div className="header">
         <div className="headerButtonWrapper">
           <button className="headerButton">
-            Home &nbsp;
+            <Link to="/">Home</Link> &nbsp;
             <GiDogHouse />
           </button>
-          <button className="headerButton">About</button>
+          <button className="headerButton">
+            {" "}
+            <Link to="/about">About</Link>
+          </button>
           <a href="https://dog.ceo/dog-api/" target="blank">
             <button className="headerButton">Dog API</button>
           </a>
