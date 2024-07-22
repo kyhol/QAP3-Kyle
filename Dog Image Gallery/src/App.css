@@ -288,3 +288,20 @@ a {
   text-decoration: none;
   color: whitesmoke;
 }
+
+.dropDownArrow {
+  color: #804886;
+  font-size: 20px;
+  cursor: pointer;
+}
+.dropDownArrow:hover {
+  color: #d59fdb;
+}
+.aboutPageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
