@@ -82,7 +82,56 @@ const About = () => {
           <IoIosArrowDropdown />
         </span>
       </h1>
-      {showInfo.packages && <p>Installed packages info</p>}
+      {showInfo.packages && (
+        <p>
+          <h2>Installed packages info:</h2>
+          <p>
+            To install these packages, you can use the following commands:
+            <br />
+            <code>npm install react</code>
+            <br />
+            <code>npm install react-image-carousel</code>
+            <br />
+            <code>npm install react-router-dom</code>
+            <br />
+            <code>npm install react-icons</code>
+            <br />
+            <code>npm install react-font-poppins</code>
+          </p>
+          <h2>React:</h2>
+          <p>
+            React is a JavaScript library for building user interfaces. It
+            allows developers to create reusable UI components and manage the
+            state of their applications efficiently.
+          </p>
+          <h2>React-image-carousel:</h2>
+          <p>
+            React-image-carousel is a component for creating image carousels in
+            React applications. It provides an easy way to add a slideshow of
+            images with various customization options.
+          </p>
+          <h2>React-router-dom:</h2>
+          <p>
+            React-router-dom is a routing library for React applications. It
+            enables the creation of single-page applications with dynamic
+            routing, allowing for navigation between different views without a
+            full page reload.
+          </p>
+          <h2>React-icons:</h2>
+          <p>
+            React-icons is a library that provides a set of popular icons as
+            React components. It includes icons from various icon libraries like
+            Font Awesome, Material Design, and more, making it easy to use icons
+            in your React projects.
+          </p>
+          <h2>React-font-poppins:</h2>
+          <p>
+            React-font-poppins is a package that allows you to easily include
+            the Poppins font in your React application. It simplifies the
+            process of adding custom fonts to your project.
+          </p>
+        </p>
+      )}
     </div>
   );
 };
