@@ -310,6 +310,13 @@ a {
   justify-content: center;
   gap: 20px;
 }
+.footer-links a p {
+  color: white;
+}
+.footer-links a p:hover {
+  color: #dec1ff;
+  scale: 1.1;
+}
 @media (max-width: 1024px) {
   .header {
     display: flex;
